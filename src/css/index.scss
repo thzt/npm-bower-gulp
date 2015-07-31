@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+@import "../css-lib/child-of-index.scss";
+
+body{
+	margin:0;
+	padding:0;
+    font-family: "微软雅黑";
+}
+
+input[type=text]{
+	width:180px;
+	height:30px;
+	border: 1px solid #ccc;
+}
+select{
+	width:182px;
+	height:34px;
+	border: 1px solid #ccc;
+}
+.big-button{
+	width:100px;
+	height:36px;
+	line-height:36px;
+	text-align: center;
+	color: #ffffff;
+    background-color: #4B739A;
+	display:inline-block;
+	cursor:pointer;
+}
+
+.layout{
+	border-collapse: collapse;
+	width:100%;
+	&>tbody>tr{
+		&>#{child-of-index("td",1)}{
+			vertical-align: top;
+			min-width:230px;
+			width:230px;
+			background: #f4f4f4;
+			color:#555;
+		}
+		&>#{child-of-index("td",2)}{
+			vertical-align: top;
+		}
+	}
+}
+
+.low-case-list{
+	width:100%;
+	padding:20px 0;
+	
+	&>div{
+		width:80%;
+		margin:10px auto;
+	}
+	&>#{child-of-index("div",1)}{
+		font-weight:bold;
+	}
+	&>#{child-of-index("div",2)}>div{
+		margin:5px 0;
+		cursor:pointer;
+	}
+}
+
+.menu-panel{
+	width:100%;
+	
+	&>#{child-of-index("div",1)}{
+		font-weight:bold;
+		width:80%;		
+		margin:0 auto;
+		Height:50px;
+		line-height:50px;
+	}
+	&>#{child-of-index("div",2)}>div{
+		height:40px;
+		line-height:40px;
+		padding:0 10%;
+		border-top: 1px solid #e7e7e7;			
+		cursor:pointer;
+		&:hover{
+			background: #dbdbdb;
+		}
+	}
+}
+
+.main-content{
+	padding:20px;
+}
+
+.content-title{
+	width:100%;
+}
+
+.content-search-condition{
+	margin-top:30px;
+	&>table{
+		border-collapse: collapse;
+		&>tbody>tr>td{
+			padding:5px 0;
+			padding-right:10px;
+			&>span{
+				padding-left:20px;
+				white-space: nowrap;
+			}
+		}
+		&>tbody>tr>#{child-of-index("td",1)}>span{
+			padding-left:0;
+		}
+	}
+}
+
+.content-table{
+	margin-top:30px;
+	&>#{child-of-index("div",1)}{
+		margin-bottom:5px;
+	}
+	&>table{
+		width:100%;
+		border-collapse: collapse;
+		text-align: center;
+		&>thead>tr>th{
+			white-space: nowrap;
+			padding:12px 5px;
+			background: #5E87B0;
+			border-width: 0;
+			color:white;
+		}
+		&>tbody>tr{
+			&:nth-child(even){
+				background:#f5f5f5;
+			}
+			&>td{
+				border:1px solid #ddd;		
+				white-space: nowrap;
+				padding:10px 5px;
+			}
+		}
+	}
+	&>#{child-of-index("div",3)}{
+		float:right;
+		margin:10px 0;
+	}
+}
